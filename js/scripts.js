@@ -110,8 +110,8 @@ $(document).ready(function(){
     const inputtedSize = $("select#pizzaSize option:selected").val();
     const inputtedToppings = getToppings();
     let pizza = new Pizza(inputtedToppings, inputtedSize);
-    pizzaCart.addPizza(pizza);
-    displayCart(pizzaCart);
+    pizzaOrder.addPizza(pizza);
+    displayOrder(pizzaOrder);
     uncheckIngredients();
     $(".orderTotal").text(parseFloat(pizzaOrder.orderTotal).toFixed(2));
   })
