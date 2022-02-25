@@ -1,0 +1,17 @@
+body {
+  background-color: maroon;
+}
+
+body {
+  padding: 5%;
+}
+
+#show-pizza{
+  display: none;
+}
+
+button{
+  background-color: rgb(72, 199, 53);
+  font-size: 12pt;
+ 
+}
