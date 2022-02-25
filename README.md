@@ -40,6 +40,35 @@ Test: "It should add 1.00 per additional topping to total cost of a small pizza"
 Code: let myPizza = new Pizza(["extra cheese"], "small"); myPizza.totalCost();
 Expected Output: 11.00
 
+Test: "It should add 2.00 when 2 toppings are added to base price of small pizza."
+Code: let myPizza = new Pizza(["extra cheese", "tomatoes"], "small"); myPizza.totalCost();
+Expected Output: 12.00
+
+Test: "It should calculate the total cost of a 'medium' pizza"
+Code: let myPizza = new Pizza([""]), "medium"); pizzaSize.totalCost();
+Expected Output: 15.00
+
+Test: "It should add 1.00 per additional topping to total cost of a medium pizza"
+Code: let myPizza = new Pizza(["extra cheese"], "medium"); myPizza.totalCost();
+Expected Output: 16.00
+
+Test: "It should add 2.00 when 2 toppings are added to base price of medium pizza."
+Code: let myPizza = new Pizza(["extra cheese", "tomatoes"], "medium"); myPizza.totalCost();
+Expected Output: 178.00
+
+Test: "It should calculate the total cost of a 'large' pizza"
+Code: let myPizza = new Pizza([""]), "large"); pizzaSize.totalCost();
+Expected Output: 20.00
+
+Test: "It should add 1.00 per additional topping to total cost of a small pizza"
+Code: let myPizza = new Pizza(["extra cheese"], "small"); myPizza.totalCost();
+Expected Output: 21.00
+
+Test: "It should add 2.00 when 2 toppings are added to base price of large pizza."
+Code: let myPizza = new Pizza(["extra cheese", "tomatoes"], "large"); myPizza.totalCost();
+Expected Output: 22.00
+
+
 
 
 
