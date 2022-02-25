@@ -1,6 +1,6 @@
 # Pizza Parlor
 
-A web application that transforms user inputted numbers into special worded messages. This is an exercise using arrays and looping.
+A webpage for a pizza parlor in which the user can choose pizza size and toppings and get a total cost for their order.
 
 ## By Deya Card
 
