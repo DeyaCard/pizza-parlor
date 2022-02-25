@@ -30,6 +30,17 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const myPizza = new Pizza(["pepperoni", "pineapple"], "large");
 Expected Output: Pizza { toppings: ["pepperoni", "pineapple"], size: "large" }
 
+#### Describe: totalCost()
+
+Test: "It should calculate the total cost of a 'small' pizza"
+Code: let myPizza = new Pizza([""]), "small"); pizzaSize.totalCost();
+Expected Output: 10.00
+
+Test: "It should add 1.00 per additional topping to total cost of a small pizza"
+Code: let myPizza = new Pizza(["extra cheese"], "small"); myPizza.totalCost();
+Expected Output: 11.00
+
+
 
 
 
