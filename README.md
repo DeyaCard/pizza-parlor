@@ -2,14 +2,16 @@
 
 A web application that transforms user inputted numbers into special worded messages. This is an exercise using arrays and looping.
 
-## By: Deya Card
+## By Deya Card
 
 ### Technologies used:
 
-* JavaScript
-* HTML/CSS
-* jQuery
 * Bootstrap
+* CSS
+* HTML
+* JavaScript
+* jQuery
+
 
 ### Setup/Installation Requirements:
 
@@ -22,11 +24,13 @@ https://github.com/DeyaCard/pizza-parlor
 ### Tests:
 
 
-#### Describe: mrRobogers()
+#### Describe: Pizza()
 
-Test: "It should return a string of user entered numbers beginning with 0."
-Code: mrRobogers(6);
-Expected Output: [0,1,2,3,4,5,6]
+Test: "It should return a Pizza object with two properties for toppings and size."
+Code: const myPizza = new Pizza(["pepperoni", "pineapple"], "large");
+Expected Output: Pizza { toppings: ["pepperoni", "pineapple"], size: "large" }
+
+
 
 
 
