@@ -1,7 +1,6 @@
-'strict';
+'strict mode';
 
 //Business Logic
-
 
 function PizzaOrder() {
   this.pizzas = {};
@@ -53,71 +52,7 @@ Pizza.prototype.pizzaCost = function(toppings, size) {
 }
 
 
-
 //UI Logic
 
 let pizzaOrder = new PizzaOrder();
-
-function getToppings() {
-  const toppings = [];
-  const checkedToppings = $("input:checkbox[name=ingredient]:checked").each(function() {
-    toppings.push($(this).val());
-  })
-  return toppings;
-}
-
-
-function displayOrder(orderToDisplay){
-  $("#pizzaOrder").show();
-  let pizzasList = $("ul#pizzas");
-  let htmlForPizzas = "";
-  Object.keys(orderToDisplay.pizzas).forEach(function(key){
-    const pizza = orderToDisplay.findPizza(key);
-    htmlForPizzas += "<li id=" + pizza.id + ">" + pizza.size + " pizza - $" + pizza.totalCost.toFixed(2) + "</li>";
-  });
-  pizzasList.html(htmlForPizzas);
-}
-
-function showPizza(pizzaId){
-  const pizza = pizzaOrder.findPizza(pizzaId);
-  $("#show-pizza").toggle();
-  $(".toppings").html(pizza.toppings.join(", "));
-}
-
-function uncheckIngredients(){
-  const checkedToppings = $("input:checkbox[name=ingredient]").each(function(){
-    if($("input:checkbox[name=ingredient]").prop('checked', true)){
-      $("input:checkbox[name=ingredient]").prop('checked', false);
-    }
-  })
-}
-
-$("ul#pizzas").on('click','li', function(){
-  showPizza(this.id);
-})
-
-function addPizzaListeners(){
-  $("ul#pizzas").on('click','li', function(){
-    showPizza(this.id);
-  })
-  }
-
-$(document).ready(function(){
-  addPizzaListeners();
-  $(".sizeColumn, .toppingsColumn, button.submit").hide();
-  $("form#pizzaForm").submit(function(){
-    event.preventDefault();
-    const inputtedSize = $("select#pizzaSize option:selected").val();
-    const inputtedToppings = getToppings();
-    let pizza = new Pizza(inputtedToppings, inputtedSize);
-    pizzaOrder.addPizza(pizza);
-    displayOrder(pizzaOrder);
-    uncheckIngredients();
-    $(".orderTotal").text(parseFloat(pizzaOrder.orderTotal).toFixed(2));
-  })
-})
-
-
-
-
 
