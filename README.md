@@ -54,7 +54,7 @@ Expected Output: 16.00
 
 Test: "It should add 2.00 when 2 toppings are added to base price of medium pizza."
 Code: let myPizza = new Pizza(["extra cheese", "tomatoes"], "medium"); myPizza.totalCost();
-Expected Output: 178.00
+Expected Output: 17.00
 
 Test: "It should calculate the total cost of a 'large' pizza"
 Code: let myPizza = new Pizza([""]), "large"); pizzaSize.totalCost();
