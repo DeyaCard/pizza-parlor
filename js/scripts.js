@@ -2,14 +2,15 @@
 
 //Business Logic
 
-function PizzaOrder(size, toppings, price) {
+//constructor:
+function PizzaOrder(size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.price = 0;
 }
 
-PizzaOrder.prototype.addSize = function() {
-  this.size = 0;
+PizzaOrder.prototype.addSize = function(pieSize) {
+  this.size.push(pieSize);
 }
 
 PizzaOrder.prototype.addToppings = function(toppings) {
@@ -27,6 +28,7 @@ PizzaOrder.prototype.pizzaPrice = function() {
   }else {
     this.price += 20.00;
   }
+  return this.price;
 }
 
 
@@ -34,23 +36,22 @@ PizzaOrder.prototype.pizzaPrice = function() {
 
 $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
-    $("#submit").click(function() {
-    let toppings = new array();
+      event.preventDefault();
+    let toppings = [];
+    let size = $("#pizzaSize").val();
     $('input[name="ingredient"]:checked').each(function() {
       toppings.push(this.value);
     });
-    alert("Your order: "+toppings.length+"\n"+"And, it is: "+toppings);
+    
+    let pizzaOrder = new PizzaOrder(size, toppings);
+    let totalPrice = pizzaOrder.pizzaPrice();
+    console.log(totalPrice);
+    console.log(pizzaOrder.price)
 
-    console.log(toppings);
-    let pizzaOrder = new PizzaOrder();
-    let totalPrice = 
-    pizzaOrder.addToppings();
-    pizzaOrder.addSize();
-    pizzaOrder.pizzaCost();
 
   });
 });
-});
+
 
 
 
